@@ -13,20 +13,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/employee")
-public class EmployeeService {
+public class WelcomeToLandmarkUniversity {
+    public static void main(String[] args) {
+        // Landmark University Logo
+        String logo = "   _       __                     __            _         \n" +
+                      "  | |     / /___ _____ ___  ___  / /__  ______ (_)__  _____\n" +
+                      "  | | /| / / __ `/ __ `__ \\/ _ \\/ / _ \\/ ___/ / / _ \\/ ___/\n" +
+                      "  | |/ |/ / /_/ / / / / / /  __/ /  __/ /  / / /  __/ /    \n" +
+                      "  |__/|__/\\__,_/_/ /_/ /_/\\___/_/\\___/_/  /_/_/\\___/_/     \n";
 
-	
-	@RequestMapping(value = "/getEmployeeDetails", method = RequestMethod.GET)
-	@ResponseBody
-	String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
-			throws JSONException {
-
-		JSONObject js = new JSONObject();
-		js.put("Name", "Landmark Technologies");
-		js.put("Calling Name", "mylandmark");
-		js.put("DOB", "May 1, 2005");
-		js.put("Hobbies", "Praying, Singing, Reading Technical Blogs,Teaching, Helping to Poor People..");
-		js.put("Places he like", "Africa, NA, Bali");
-		return js.toString();
+        // Welcome message
+        String welcomeMessage = "Welcome to Landmark University!";
+        
+        // Decorative line
+        String decorativeLine = "=======================================";
+        
+        // Display the welcome message with the decorative presentation
+        System.out.println(logo);
+        System.out.println(decorativeLine);
+        System.out.println(welcomeMessage);
+        System.out.println(decorativeLine);
+    
 }
 }
